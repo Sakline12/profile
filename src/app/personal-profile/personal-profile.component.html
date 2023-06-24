@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <title>Page Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="header row d-flex justify-content-center mb-lg-5">
+      <div
+        class="col-2 text-light text-center text-sm-start d-flex justify-content-sm-start justify-content-center align-items-center"
+      >
+        <div class="mt-5">BIOGRAPH</div>
+      </div>
+      <div class="col-xl-8 col-mb-8 col-sm-8 text-end text-center text-sm-end">
+        <div class="mt-5">
+          <a
+            [routerLink]="['/saklineheem']"
+            routerLinkActive="router-link-active"
+            style="text-decoration: none"
+            ><span class="link-inner ms-3 text-light">HOME</span></a
+          >
+          <a
+            [routerLink]="['/about']"
+            routerLinkActive="router-link-active"
+            style="text-decoration: none"
+            ><span class="link-inner ms-3 text-light">ABOUT</span></a
+          >
+          <a href="#" style="text-decoration: none" (click)="openModal2($event)"
+            ><span class="link-inner ms-3 text-light">EXPERIENCES</span></a
+          >
+
+          <ng-template #modalTemplate2>
+            <div class="modal-header">
+              <h4 class="modal-title">***My Experience***</h4>
+              <!-- <button
+                type="button"
+                class="close"
+                aria-label="Close"
+                (click)="modalRef2.hide()"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button> -->
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <p>
+                    After complete my graduation I have been work in two
+                    companies. These companies are:
+                  </p>
+                  <h6>Bengal Software</h6>
+                  <p class="pront ms-2">
+                    ○ Gained experience in handling big projects.
+                  </p>
+                  <p class="pront ms-2">
+                    ○ Learned project management methodologies and techniques.
+                  </p>
+                  <p class="pront ms-2">
+                    ○ Developed skills in breaking down complex tasks and
+                    setting realistic deadlines.
+                  </p>
+                  <h6>BacBon Limited</h6>
+                  <p class="pront ms-2">
+                    ○ Learned how to work effectively in a team.
+                  </p>
+                  <p class="pront ms-2">
+                    ○ Contributed innovative ideas and solutions in
+                    brainstorming sessions.
+                  </p>
+                  <p class="pront ms-2">
+                    ○ Developed skills in breaking down complex tasks and
+                    setting realistic deadlines.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn cls btn-secondary"
+                (click)="modalRef2.hide()"
+              >
+                Close
+              </button>
+            </div>
+          </ng-template>
+          <!-- <a href="#" style="text-decoration: none"
+        ><span class="link-inner ms-3 text-light">PAGES</span></a
+      > -->
+          <a href="#" style="text-decoration: none" (click)="openModal($event)">
+            <span class="link-inner ms-3 text-light">CONTACT</span>
+          </a>
+
+          <ng-template #modalTemplate>
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Contact Numbers</h5>
+                  <!-- <button
+                    type="button"
+                    class="close rounded-button"
+                    aria-label="Close"
+                    (click)="modalRef.hide()"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button> -->
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h6>Personal</h6>
+                      <p>
+                        Phone:
+                        <a href="tel:+123456789" style="text-decoration: none"
+                          >+8801748164525</a
+                        >
+                      </p>
+                      <!-- <p>Email: <a href="mailto:personal@example.com">personal@example.com</a></p> -->
+                    </div>
+                    <div class="col-md-6">
+                      <h6>Official</h6>
+                      <p>
+                        Phone:
+                        <a href="tel:+987654321" style="text-decoration: none"
+                          >+8801714936487</a
+                        >
+                      </p>
+                      <!-- <p>Email: <a href="mailto:official@example.com">official@example.com</a></p> -->
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn cls btn-secondary"
+                    (click)="modalRef.hide()"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </div>
+      </div>
+
+      <div class="col-xl-10 color text-center mt-5">
+        <div class="col cl shadow-lg rounded-3 p-5 justify-content-center">
+          <div class="row d-flex justify-content-start">
+            <div
+              class="card-body middle col-xl-5 justify-content-end tiddle col-md-7"
+            >
+              <img
+                src="assets/Image/Profile1.jpg"
+                class="image img-fluid img-thumbnail"
+                height="580px"
+                alt="..."
+              />
+            </div>
+
+            <div class="col-md-1">
+              <div class="vertical-line-container">
+                <div class="vertical-line"></div>
+              </div>
+            </div>
+            <div class="col-md-4 mt-5">
+              <p class="text-start">HELLO EVERYBODY, I AM</p>
+              <h3 class="text-start mb-4">P. K. M. Sakline Bari Heemel</h3>
+              <h5 class="text-start mb-3">Software Engineer</h5>
+              <p class="text-start">
+                  To secure a challenging position in a reputed organization to expand my education,
+                  knowledge and skills. Ensure a responsible career opportunity to fully utilize my
+                  skills while making significant contributions to the success of the company.
+              </p>
+              <p class="text-start mt-5">
+                <i class="text-start fas fa fa-calendar"></i> 5th December,2000
+              </p>
+              <p class="text-start">
+                <i class="text-start fas fa fa-phone"></i> 01748164525
+              </p>
+              <p class="text-start">
+                <i class="text-start fas fa fa-envelope"></i>
+                saklineheemel51@gmail.com
+              </p>
+
+              <p class="text-start mt-5">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100006197464926&mibextid=LQQJ4d"
+                  style="text-decoration: none"
+                >
+                  <i class="fb fab fa-facebook fa-2x"></i>
+                </a>
+                <a href="#" class="ms-2">
+                  <i class="tw fab fa-twitter fa-2x"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/p-k-m-sakline-bari-heemel-141b5718b"
+                  class="ms-2"
+                >
+                  <i class="ln fab fa-linkedin fa-2x"></i>
+                </a>
+              </p>
+              <button class="attractive-button"[routerLink]="['/message']">Send Message</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+  </body>
+</html>

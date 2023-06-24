@@ -1,0 +1,34 @@
+<div class="container bg-body rounded d-flex justify-content-center align-items-center">
+  <div class="body">
+    <button class="bt2" [routerLink]="['']"
+            routerLinkActive="router-link-active">←</button><h1>About Me</h1>
+    <hr>
+    <p>
+      I'm a full stack Software Developer. I have a passion for building web applications and solving problems. I'm a self-taught developer and I'm always looking for new challenges to learn and grow.
+    </p>
+
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill" *ngFor="let skill of skills; let i = index" [@fadeAnimation] [style.animation-delay]="i * 0.3 + 's'">
+        <p>{{ skill.name }}</p>
+        <div class="progress-bar">
+          <div class="progress" [style.width.%]="skill.percentage">
+            {{ skill.percentage }}%
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2>Projects</h2>
+    <p>I have completed many projects. Some of them are:</p>
+    <p>○ Farmer Assistance(Using Laravel & React)</p>
+    <p>○ Task Management System(Using Laravel & Angular)</p>
+    <p>○ Heart Disease Prediction(Using Python)</p>
+    <p>○ Hospital Management System(Using .Net)</p>
+    <p>○ Air Ticket(Using C++)</p>
+
+<div class="text-center">
+  <h5 class="cv">For more details, click on my CV</h5>
+  <button class="btn btn-primary" (click)="downloadFile()">CV</button>
+</div>
+  </div>
+</div>

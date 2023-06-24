@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="mb-5 d-flex justify-content-center">
+        <h2 style="color: rgb(154, 102, 102)">WELCOME TO ME</h2>
+      </div>
+      <img
+        src="assets/Image/icons8-biography-64.png"
+        class="image img-fluid img-thumbnail"
+        height="100px"
+        alt="..."
+      />
+      <p>Please choose an option below:</p>
+      <button
+        class="btn btn-primary btn-registration"
+        (click)="openModal($event)"
+        data-bs-toggle="modal"
+        data-bs-target="#registrationModal"
+      >
+        Registration
+      </button>
+
+      <div
+        class="modal fade"
+        id="registrationModal"
+        tabindex="-100"
+        aria-labelledby="registrationModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="registrationModalLabel">Register</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+
+                <div class="row">
+                  <div class="col-12">
+                    <form #ngForm="ngForm" (ngSubmit)="register()">
+                      <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="form.name"/>
+                      </div>
+                      <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="form.email"/>
+                      </div>
+                      <div class="mb-3">
+                        <label for="password" class="form-label"
+                          >Password</label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="password"
+                          name="password"
+                          [(ngModel)]="form.password"
+                        />
+                      </div>
+                      <button type="submit" class="btn btn-success">
+                        Submit
+                      </button>
+                    </form>
+                  </div>
+                </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <button class="btn btn-login" [routerLink]="['/login']">Login</button>
+    </div>
+  </body>
+</html>
